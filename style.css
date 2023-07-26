@@ -1,0 +1,395 @@
+:root {
+
+    --bg-nav: #f8f8f8;
+    --nav-item-color: #717171;
+
+    --bg-body: #fff;
+
+    --title-color: #143774;
+    --primary-color: #707070;
+    --secondary-color: #1792d2;
+
+    --aside-border-color: #ebebeb;
+
+    --primary-font-family: 'Lora';
+    --secondary-font-family: 'Ubuntu';
+
+    --title-size: 2rem;
+    --subtitle-size: .75rem;
+
+    --heading-size: 1.5rem;
+    --subheading-size: .75rem;
+
+    --body-size: 1.125rem;
+    --readMore-size: 0.875rem;
+    --info-size: 0.875rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+    font: inherit;
+    color: var( --gray );
+
+    padding: .5em 1em;
+}
+
+
+/* Layout */
+
+
+.wrapper {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+
+/* Navbar */
+
+
+.bg-nav {
+    /* background-color: magenta; */
+
+    background-color: var( --bg-nav );
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 4em 0;
+}
+
+.brand-section h1 {
+    font-family: var( --primary-font-family );
+    font-size: var( --title-size );
+    font-weight: 100;
+
+    color: var( --title-color );
+}
+.brand-section p {
+    font-family: var( --secondary-font-family );
+    font-size: var( --subtitle-size );
+    font-weight: 900;
+
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+
+    color: var( --secondary-color );
+}        
+
+.nav-dropdown {
+    display: none;    
+}
+.nav-dropdown button:hover,
+.nav-dropdown button:focus {
+    color: var( --secondary-color );
+}
+
+.navbar-items {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+
+    font-family: var( --secondary-font-family );
+}
+.navbar-items li {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    margin-left: 2em;
+    padding-bottom: 0.2em;
+}
+.navbar-items a {
+    color: var( --nav-item-color );
+    padding-bottom: 0.2em;
+}
+.navbar-items a:hover,
+.navbar-items a:focus {
+    color: var( --secondary-color );
+}
+
+.active {
+    border-bottom: 0.125rem solid var( --primary-color );
+}
+.active:hover,
+.active:focus {
+    border-bottom: 0.125rem solid var( --secondary-color );
+}
+
+/* Content - Main - First */
+
+
+.content {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 3em 0;
+}
+
+.main {
+    width: 70%;
+}
+
+.main-image {
+    height: 20rem;
+    object-fit: cover;
+    object-position: bottom;
+}
+.about-me-image {
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 2em;
+}
+
+.first-article {
+    border-bottom: 2px solid var( --aside-border-color );
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+.first-article h3 {
+    font-size: 1.313rem;
+    font-weight: 100;
+    margin-bottom: 1em;
+}
+
+.post-info {
+    color: var( --primary-color );
+    margin: 1em 0;
+}
+
+.post-title {
+    font-family: var( --primary-font-family );
+    font-weight: 100;
+
+    margin-bottom: 1em;
+    color: var( --title-color );
+}
+
+.post-description {
+    font-family: var( --secondary-font-family );
+
+    margin-bottom: 1em;
+    color: var( --primary-color );
+}
+.post-description p, a {
+    color: var( --secondary-color );
+}
+
+.post-description a:hover,
+.post-description a:focus {
+    color: var( --title-color );
+    text-decoration: underline;
+}
+
+.read-more {
+    font-family: var( --secondary-font-family );
+    font-size: var( --info-size );
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.175rem;
+}
+.read-more:hover,
+.read-more:focus {
+    color: var( --title-color );
+    text-decoration: underline;
+}
+
+
+/* Content - Recent */
+
+
+.recent-article {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 2em;
+}
+
+.recent-image {
+    width: 30%;
+}
+.recent-image img {
+    height: 15rem;
+    object-fit: cover;
+}
+.left {
+    object-position: left;
+}
+
+.recent-details {
+    width: 65%;
+}
+
+
+/* Content - Aside */
+
+
+.aside {
+    width: 25%;
+}
+.aside h2 {
+    font-family: var(--secondary-font-family );
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+    color: var( --title-color );
+}
+
+.about-me {
+    border: 1.25rem solid var( --aside-border-color );
+    padding: 1.5em;
+    margin-bottom: 4em;
+}
+.about-me img {
+    height: 10rem;
+    object-fit: cover;
+    object-position: bottom;
+
+    margin: 1em 0;
+}
+.about-me p a {
+    color: var( --title-color );
+}
+.about-me p:hover,
+.about-me p:focus {
+    text-decoration: underline;
+}
+
+.recent-posts {
+    border: 1.25rem solid var( --aside-border-color );
+    padding: 1.5em;
+    margin-bottom: 4em;
+}
+
+.recent-p img {
+    margin: 1em 0;
+}
+.recent-p h3 {
+    font-weight: 100;
+    padding-bottom: 1.5em;
+}
+.recent-p h3 a {
+    color: var( --title-color );
+}
+.recent-p h3:hover,
+.recent-p h3:focus { 
+    text-decoration: underline;
+}
+.recent-p {
+    border-bottom: 2px solid var( --aside-border-color );
+    margin-bottom: 1em;
+}
+
+.last {
+    border-bottom: none;
+}
+
+
+/* Footer */
+.bg-footer {
+    background-color: var( --title-color );
+    padding: 4em 0;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var( --secondary-font-family );
+    color: #f8f8f8;
+}
+.footer h4 {
+    font-weight: 500;
+}
+.footer p {
+    color: #f8f8f879;
+}
+
+/* Media queries */
+
+
+@media only screen and ( max-width: 850px ) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-items {
+        margin-top: 2em;
+    }
+    .navbar-items li {
+        margin-inline: 1em;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+    .main,
+    .aside {
+        width: auto;
+    }
+
+    .about-me img {
+        height: 15rem;
+        object-position: center;
+    }
+
+    .recent-p img {
+        height: 15rem;
+        object-fit: cover;
+    }
+}
+
+@media only screen and ( max-width: 455px ) {
+    .navbar {    
+        padding: 1em 0;
+    }
+    .brand-section {
+        text-align: center;
+    }
+    .brand-section h1 {
+        margin-top: .5em;
+    }
+    .nav-dropdown {
+        display: flex;
+        justify-content: flex-end;
+
+        margin-top: 1em;
+    }
+    .navbar-items {
+        display: none;
+    }
+    .show {
+        display: flex;
+    }
+    .navbar-items {
+        flex-direction: column;
+
+        margin-top: 1em;
+    }
+    .navbar-items li {
+        margin: 1.25em 0;
+    }
+
+    .recent-article {
+        flex-direction: column;
+    }
+    .recent-details,
+    .recent-image {
+        width: auto;
+    }
+}
